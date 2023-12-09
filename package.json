@@ -1,7 +1,7 @@
 {
-  "name": "nodejs-ts-starter",
+  "name": "design-patterns-with-typescript",
   "version": "1.0.0",
-  "description": "Start A TypeScript Project With NodeJS",
+  "description": "Design Patterns With Typescript",
   "main": "app.js",
   "scripts": {
     "start": "nodemon --watch src/**/*.ts --exec \"ts-node\" src/app.ts"
