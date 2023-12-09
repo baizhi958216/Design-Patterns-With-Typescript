@@ -2,96 +2,37 @@
 
 [中文版](./README-CN.md)
 
-Design patterns are general reusable solutions to common problems that occur in software design. They represent best practices evolved over time by experienced software developers. There are 23 well-known design patterns:
+Referencing "Java Design Patterns" by Tsinghua University Press,
 
-- Singleton Pattern:
+The 23 design patterns were systematically summarized and published by the Gang of Four (GoF): Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides, during the 1994 PLoP.
 
-Ensures a class has only one instance and provides a global point of access to it.
+Design patterns are descriptions of communitcating objects and classes that are customized to solve a general design problem in a particular context.
 
-- Factory Method Pattern:
+## There are generally two classification methods for design patterns:
 
-Defines an interface for creating an object but leaves the choice of its type to the subclasses, creating an instance of a class.
+Classified by **Purpose**:
 
-- Abstract Factory Pattern:
+1. Creational Patterns (Factory Method, Abstract Factory, Builder, Prototype, Singleton)
 
-Provides an interface for creating families of related or dependent objects without specifying their concrete classes.
+2. Structural Patterns (Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy)
 
-- Builder Pattern:
+3. Behavioral Patterns (Chain of Responsibility, Command, Interpreter, Iterator, Mediator, Memento, Observer, State, Strategy, Template Method, Visitor)
 
-Separates the construction of a complex object from its representation, allowing the same construction process to create various representations.
+Classified by **Scope**:
 
-- Prototype Pattern:
+1. Class Patterns (Handle class and subclass relationships, established through inheritance at compile time, static relationships)
 
-Creates new objects by copying an existing object, known as the prototype.
+2. Object Patterns (Handle object relationships, dynamic relationships at runtime)
 
-- Adapter Pattern:
-
-Allows the interface of an existing class to be used as another interface.
-
-- Decorator Pattern:
-
-Attaches additional responsibilities to an object dynamically.
-
-- Proxy Pattern:
-
-Provides a surrogate or placeholder for another object to control access to it.
-
-- Observer Pattern:
-
-Defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
-
-- Command Pattern:
-
-Encapsulates a request as an object, thereby allowing for parameterization of clients with different requests, queuing of requests, and logging of the parameters.
-
-- Strategy Pattern:
-
-Defines a family of algorithms, encapsulates each one, and makes them interchangeable.
-
-- State Pattern:
-
-Allows an object to alter its behavior when its internal state changes.
-
-- Template Method Pattern:
-
-Defines the skeleton of an algorithm in the superclass but lets subclasses override specific steps of the algorithm without changing its structure.
-
-- Chain of Responsibility Pattern:
-
-Passes the request along a chain of handlers. Upon receiving a request, each handler decides either to process the request or to pass it to the next handler in the chain.
-
-- Interpreter Pattern:
-
-Defines a grammar for the language the interpreter interprets.
-
-- Memento Pattern:
-
-Captures and externalizes an object's internal state so the object can be restored to this state later.
-
-- Visitor Pattern:
-
-Represents an operation to be performed on the elements of an object structure.
-
-- Composite Pattern:
-
-Composes objects into tree structures to represent part-whole hierarchies.
-
-- Flyweight Pattern:
-
-Minimizes memory usage or computational expenses by sharing as much as possible with related objects.
-
-- Mediator Pattern:
-
-Defines an object that centralizes communication between objects in a system.
-
-- Command Pattern:
-
-Encapsulates a request as an object, thereby allowing for parameterization of clients with different requests, queuing of requests, and logging of the parameters.
-
-- Iterator Pattern:
-
-Provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
-
-- Bridge Pattern:
-
-Separates an object’s abstraction from its implementation so that the two can vary independently.
+| Scope/Purpose | Creational Patterns | Structural Patterns | Behavioral Patterns     |
+| ------------- | ------------------- | ------------------- | ----------------------- |
+| Class         | Factory Method      | (Class) Adapter     | Template Method         |
+|               |                     |                     | Interpreter             |
+| Object        | Abstract Factory    | (Object) Adapter    | Chain of Responsibility |
+|               | Builder             | Bridge              | Command                 |
+|               | Prototype           | Composite           | Iterator                |
+|               | Singleton           | Decorator           | Mediator                |
+|               |                     | Facade              | Memento                 |
+|               |                     | Flyweight           | State                   |
+|               |                     | Proxy               | Strategy                |
+|               |                     |                     | Visitor                 |
