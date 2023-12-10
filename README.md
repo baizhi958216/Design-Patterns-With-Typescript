@@ -26,15 +26,16 @@ Classified by **Scope**:
 
 | Scope/Purpose | Creational Patterns | Structural Patterns | Behavioral Patterns     |
 | ------------- | ------------------- | ------------------- | ----------------------- |
-| Class         | Factory Method      | (Class) Adapter     | Template Method         |
-|               |                     |                     | Interpreter             |
+| Class         | Factory Method      | (Class) Adapter     | Interpreter             |
+|               |                     |                     | Template Method         |
 | Object        | Abstract Factory    | (Object) Adapter    | Chain of Responsibility |
 |               | Builder             | Bridge              | Command                 |
 |               | Prototype           | Composite           | Iterator                |
 |               | Singleton           | Decorator           | Mediator                |
 |               |                     | Facade              | Memento                 |
-|               |                     | Flyweight           | State                   |
-|               |                     | Proxy               | Strategy                |
+|               |                     | Flyweight           | Observer                |
+|               |                     | Proxy               | State                   |
+|               |                     |                     | Strategy                |
 |               |                     |                     | Visitor                 |
 
 ## Object-Oriented Design Principles
