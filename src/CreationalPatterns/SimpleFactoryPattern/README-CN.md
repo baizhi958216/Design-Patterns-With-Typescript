@@ -99,3 +99,63 @@ export const SimpleFactoryPatternClient = () => {
   LineChart.display();
 };
 ```
+
+## 开闭原则
+
+像这样创建具体 Chart 对象时，必须通过**修改客户端代码**中的静态工厂方法的参数来更换具体产品对象，对客户端来说是违反了开闭原则的。
+
+在 Java 中，使用 XML 格式的配置文件来存储参数，然后，编写 XML 解析工具类来读取配置文件，并根据读取到的参数来创建具体产品对象。
+
+对于 TypeScript，我们可以新建一个 config.json，然后在`tsconfig.json`开启`resolveJsonModule`，就可以直接将 json 文件直接读成对象作为配置，可谓是遥遥领先(bushi)。
+
+配置`config.json`：
+
+```json
+{
+  "chartType": "HistogramChart"
+}
+```
+
+修改后的**图表工厂类**：
+
+```ts
+import { Chart } from "./Chart.interface";
+import { HistogramChart } from "./HistogramChart";
+import { LineChart } from "./LineChart";
+import { PieChart } from "./PieChart";
+import config from "./config.json";
+
+export class ChartFactory {
+  static createChart(): Chart | null {
+    const chartType = config.chartType;
+    switch (chartType) {
+      case "HistogramChart":
+        console.log("初始化设置柱状图！");
+        return new HistogramChart();
+      case "PieChart":
+        console.log("初始化设置饼状图！");
+        return new PieChart();
+      case "LineChart":
+        console.log("初始化设置折线图！");
+        return new LineChart();
+      default:
+        console.log("无效的图表类型");
+        return null;
+    }
+  }
+}
+```
+
+修改后的客户端测试类：
+
+```ts
+import { Chart } from "./Chart.interface";
+import { ChartFactory } from "./ChartFactory";
+
+export const SimpleFactoryPatternClient = () => {
+  const chart: Chart | null = ChartFactory.createChart();
+  if (chart) {
+    chart.display();
+  }
+};
+```

@@ -99,3 +99,63 @@ export const SimpleFactoryPatternClient = () => {
   LineChart.display();
 };
 ```
+
+## Open-Closed Principle
+
+When creating concrete `Chart` objects like this, changing the specific product object requires modifying the parameters of the static factory method in the client code, which violates the open-closed principle.
+
+In Java, one approach is to use an XML-formatted configuration file to store parameters. Then, you can write an XML parsing utility class to read the configuration file and create specific product objects based on the parameters.
+
+For TypeScript, you can create a `config.json` file and enable the `resolveJsonModule` option in `tsconfig.json`. This allows you to directly read the JSON file as an object for configuration.
+
+Configuration in `config.json`:
+
+```json
+{
+  "chartType": "HistogramChart"
+}
+```
+
+Modified **ChartFactory class**:
+
+```ts
+import { Chart } from "./Chart.interface";
+import { HistogramChart } from "./HistogramChart";
+import { LineChart } from "./LineChart";
+import { PieChart } from "./PieChart";
+import config from "./config.json";
+
+export class ChartFactory {
+  static createChart(): Chart | null {
+    const chartType = config.chartType;
+    switch (chartType) {
+      case "HistogramChart":
+        console.log("Initializing settings for Histogram Chart!");
+        return new HistogramChart();
+      case "PieChart":
+        console.log("Initializing settings for Pie Chart!");
+        return new PieChart();
+      case "LineChart":
+        console.log("Initializing settings for Line Chart!");
+        return new LineChart();
+      default:
+        console.log("Invalid chart type");
+        return null;
+    }
+  }
+}
+```
+
+Modified client testing class:
+
+```ts
+import { Chart } from "./Chart.interface";
+import { ChartFactory } from "./ChartFactory";
+
+export const SimpleFactoryPatternClient = () => {
+  const chart: Chart | null = ChartFactory.createChart();
+  if (chart) {
+    chart.display();
+  }
+};
+```
