@@ -11,7 +11,7 @@
 1. 建立抽象图表接口，充当**抽象产品类**：
 
 ```ts
-interface Chart {
+export interface Chart {
   display(): void;
 }
 ```
@@ -21,7 +21,7 @@ interface Chart {
 柱状图：
 
 ```ts
-import { Chart } from "./chart";
+import { Chart } from "./Chart.interface";
 
 export class HistogramChart implements Chart {
   display(): void {
@@ -33,7 +33,7 @@ export class HistogramChart implements Chart {
 饼状图：
 
 ```ts
-import { Chart } from "./chart";
+import { Chart } from "./Chart.interface";
 
 export class PieChart implements Chart {
   display(): void {
@@ -45,7 +45,7 @@ export class PieChart implements Chart {
 折线图：
 
 ```ts
-import { Chart } from "./chart";
+import { Chart } from "./Chart.interface";
 
 export class LineChart implements Chart {
   display(): void {
@@ -57,13 +57,13 @@ export class LineChart implements Chart {
 3. 创建**图表工厂类**：
 
 ```ts
-import { Chart } from "./chart";
-import { HistogramChart } from "./histogramChart";
-import { PieChart } from "./pieChart";
-import { LineChart } from "./lineChart";
+import { Chart } from "./Chart.interface";
+import { HistogramChart } from "./HistogramChart";
+import { LineChart } from "./LineChart";
+import { PieChart } from "./PieChart";
 
 export class ChartFactory {
-  createChart(type: string): Chart {
+  static createChart(type: string): Chart {
     switch (type) {
       case "HistogramChart":
         console.log("初始化设置柱状图！");
@@ -84,17 +84,18 @@ export class ChartFactory {
 4. 客户端测试类：
 
 ```ts
-import { ChartFactory } from "./chartFactory";
+import { ChartFactory } from "./ChartFactory";
+export const SimpleFactoryPatternClient = () => {
+  // 创建一个柱状图并绘制
+  const HistogramChart = ChartFactory.createChart("HistogramChart");
+  HistogramChart.display();
 
-// 创建一个柱状图并绘制
-const HistogramChart = ChartFactory.createChart("HistogramChart");
-HistogramChart.display();
+  // 创建一个饼状图并绘制
+  const PieChart = ChartFactory.createChart("PieChart");
+  PieChart.display();
 
-// 创建一个饼状图并绘制
-const PieChart = ChartFactory.createChart("PieChart");
-PieChart.display();
-
-// 创建一个折线图并绘制
-const LineChart = ChartFactory.createChart("LineChart");
-LineChart.display();
+  // 创建一个折线图并绘制
+  const LineChart = ChartFactory.createChart("LineChart");
+  LineChart.display();
+};
 ```

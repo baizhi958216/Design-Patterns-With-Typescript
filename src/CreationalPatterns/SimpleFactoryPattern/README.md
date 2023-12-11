@@ -11,7 +11,7 @@ Suppose we need to develop a chart library that provides bar charts, pie charts,
 1. Establish an abstract chart interface, serving as the **abstract product class**:
 
 ```ts
-interface Chart {
+export interface Chart {
   display(): void;
 }
 ```
@@ -21,7 +21,7 @@ interface Chart {
 Bar chart:
 
 ```ts
-import { Chart } from "./chart";
+import { Chart } from "./Chart.interface";
 
 export class HistogramChart implements Chart {
   display(): void {
@@ -33,7 +33,7 @@ export class HistogramChart implements Chart {
 Pie chart:
 
 ```ts
-import { Chart } from "./chart";
+import { Chart } from "./Chart.interface";
 
 export class PieChart implements Chart {
   display(): void {
@@ -45,7 +45,7 @@ export class PieChart implements Chart {
 Line chart:
 
 ```ts
-import { Chart } from "./chart";
+import { Chart } from "./Chart.interface";
 
 export class LineChart implements Chart {
   display(): void {
@@ -57,13 +57,13 @@ export class LineChart implements Chart {
 3. Create a **chart factory class**:
 
 ```ts
-import { Chart } from "./chart";
-import { HistogramChart } from "./histogramChart";
-import { PieChart } from "./pieChart";
-import { LineChart } from "./lineChart";
+import { Chart } from "./Chart.interface";
+import { HistogramChart } from "./HistogramChart";
+import { LineChart } from "./LineChart";
+import { PieChart } from "./PieChart";
 
 export class ChartFactory {
-  createChart(type: string): Chart {
+  static createChart(type: string): Chart {
     switch (type) {
       case "HistogramChart":
         console.log("Initializing settings for Histogram Chart!");
@@ -84,17 +84,18 @@ export class ChartFactory {
 4. Client testing class:
 
 ```ts
-import { ChartFactory } from "./chartFactory";
+import { ChartFactory } from "./ChartFactory";
+export const SimpleFactoryPatternClient = () => {
+  // Create a histogram chart and display
+  const HistogramChart = ChartFactory.createChart("HistogramChart");
+  HistogramChart.display();
 
-// Create a histogram chart and display
-const histogramChart = ChartFactory.createChart("HistogramChart");
-histogramChart.display();
+  // Create a pie chart and display
+  const PieChart = ChartFactory.createChart("PieChart");
+  PieChart.display();
 
-// Create a pie chart and display
-const pieChart = ChartFactory.createChart("PieChart");
-pieChart.display();
-
-// Create a line chart and display
-const lineChart = ChartFactory.createChart("LineChart");
-lineChart.display();
+  // Create a line chart and display
+  const LineChart = ChartFactory.createChart("LineChart");
+  LineChart.display();
+};
 ```
