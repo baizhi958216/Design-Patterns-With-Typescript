@@ -81,7 +81,7 @@ export class ChartFactory {
 }
 ```
 
-4. Client testing class:
+4. Client testing method:
 
 ```ts
 import { ChartFactory } from "./ChartFactory";
@@ -146,7 +146,7 @@ export class ChartFactory {
 }
 ```
 
-Modified client testing class:
+Modified client testing method:
 
 ```ts
 import { Chart } from "./Chart.interface";

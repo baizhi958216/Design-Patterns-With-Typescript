@@ -81,7 +81,7 @@ export class ChartFactory {
 }
 ```
 
-4. 客户端测试类：
+4. 客户端测试方法：
 
 ```ts
 import { ChartFactory } from "./ChartFactory";
@@ -146,7 +146,7 @@ export class ChartFactory {
 }
 ```
 
-修改后的客户端测试类：
+修改后的客户端测试方法：
 
 ```ts
 import { Chart } from "./Chart.interface";
