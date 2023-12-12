@@ -4,7 +4,7 @@
   "description": "Design Patterns With Typescript",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon --watch src/**/*.ts --exec \"ts-node\" src/app.ts"
+    "start": "nodemon --watch src/**/*.ts --watch src/**/*.json --exec \"ts-node\" src/app.ts"
   },
   "keywords": [],
   "author": "baizhi958216",

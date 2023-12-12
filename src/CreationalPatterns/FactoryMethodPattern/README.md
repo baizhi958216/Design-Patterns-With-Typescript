@@ -93,3 +93,43 @@ export const FactoryMethodPatternClient = () => {
   logger.log("Message to log");
 };
 ```
+
+## Open/Closed Principle
+
+When using the factory method, clients traditionally need to instantiate specific factory classes. Such modifications to the client code can be considered a violation of the Open/Closed Principle.
+
+In the book "Java Design Patterns," reflection mechanisms and configuration files are mentioned as solutions. However, TypeScript is a statically typed language with structural characteristics. In TypeScript, type information is typically determined at compile time, unlike Java, which has runtime reflection mechanisms.
+
+We can address this in TypeScript by utilizing dynamic imports for obtaining and instantiating specific factory classes through a configuration file:
+
+config.json:
+
+```json
+{
+  "className": "FileLoggerFactory"
+}
+```
+
+Modified client test method:
+
+```typescript
+import config from "./config.json";
+import { Logger } from "./Logger.interface";
+import { LoggerFactory } from "./LoggerFactory";
+
+export const FactoryMethodPatternClient = async () => {
+  try {
+    // Retrieve the factory class name from the configuration
+    const factoryClassName: string = config.className;
+    // Dynamically import the module containing the factory class
+    const module = await import(`./${factoryClassName}`);
+    // Obtain the specific factory class
+    const factoryClass = module[factoryClassName];
+    const factory: LoggerFactory = new factoryClass();
+    const logger: Logger = factory.createLogger();
+    logger.writeLog();
+  } catch (error) {
+    console.error(`Module ${config.className} does not exist`);
+  }
+};
+```

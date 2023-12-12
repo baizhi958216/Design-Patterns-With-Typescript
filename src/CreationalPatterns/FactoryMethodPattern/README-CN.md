@@ -95,3 +95,43 @@ export const FactoryMethodPatternClient = () => {
   logger.writeLog();
 };
 ```
+
+## 开闭原则
+
+客户端在使用工厂方法时需要实例化具体的工厂类，这样的修改对客户端而言可以被认为是违反开闭原则的。
+
+在《Java 设计模式》书中提到了反射机制与配置文件，但是 TypeScript 是一门结构化的静态类型语言，在 TypeScript 中，类型信息通常在编译时就已经确定，而不是在运行时动态获取，不包含类似 Java 的运行时反射机制。
+
+我们可以使用动态导入的方法实现通过配置文件获取并且实例化具体工厂类：
+
+config.json:
+
+```json
+{
+  "className": "FileLoggerFactory"
+}
+```
+
+修改后的客户端测试方法：
+
+```ts
+import config from "./config.json";
+import { Logger } from "./Logger.interface";
+import { LoggerFactory } from "./LoggerFactory";
+
+export const FactoryMethodPatternClient = async () => {
+  try {
+    // 获取配置中的工厂类名
+    const factoryClassName: string = config.className;
+    // 动态导入工厂类的模块
+    const module = await import(`./${factoryClassName}`);
+    // 获取具体工厂类
+    const factoryClass = module[factoryClassName];
+    const factory: LoggerFactory = new factoryClass();
+    const logger: Logger = factory.createLogger();
+    logger.writeLog();
+  } catch (error) {
+    console.error(`${config.className}模块不存在`);
+  }
+};
+```
