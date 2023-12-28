@@ -2,6 +2,7 @@ import { SimpleFactoryPatternClient } from "./CreationalPatterns/SimpleFactoryPa
 import { FactoryMethodPatternClient } from "./CreationalPatterns/FactoryMethodPattern/FactoryMethodPatternClient";
 import { AbstractFactoryPatternClient } from "./CreationalPatterns/AbstractFactoryPattern/AbstractFactoryPatternClient";
 import { BuilderPatternClient } from "./CreationalPatterns/BuilderPattern/BuilderPatternClient";
+import { PrototypePatternClient } from "./CreationalPatterns/PrototypePattern/PrototypePatternClient";
 
 const DesignPatterns = {
   // 简单工厂模式
@@ -9,9 +10,11 @@ const DesignPatterns = {
   FactoryMethodPattern: FactoryMethodPatternClient,
   AbstractFactoryPattern: AbstractFactoryPatternClient,
   BuilderPattern: BuilderPatternClient,
+  PrototypePattern: PrototypePatternClient,
 };
 
 // DesignPatterns["SimpleFactoryPattern"]();
 // DesignPatterns["FactoryMethodPattern"]();
 // DesignPatterns["AbstractFactoryPattern"]();
-DesignPatterns["BuilderPattern"]();
+// DesignPatterns["BuilderPattern"]();
+DesignPatterns["PrototypePattern"]();
