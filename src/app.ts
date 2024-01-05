@@ -5,6 +5,7 @@ import { BuilderPatternClient } from "./CreationalPatterns/BuilderPattern/Builde
 import { PrototypePatternClient } from "./CreationalPatterns/PrototypePattern/PrototypePatternClient";
 import { SingletonPatternClient } from "./CreationalPatterns/SingletonPattern/SingletonPatternClient";
 import { AdapterPatternClient } from "./StructuralPatterns/AdapterPattern/AdapterPatternClient";
+import { BridgePatternClient } from "./StructuralPatterns/BridgePattern/BridgePatternClient";
 
 const DesignPatterns = {
   // 简单工厂模式
@@ -15,6 +16,7 @@ const DesignPatterns = {
   PrototypePattern: PrototypePatternClient,
   SignletonPattern: SingletonPatternClient,
   AdapterPattern: AdapterPatternClient,
+  BridgePattern: BridgePatternClient,
 };
 
 // DesignPatterns["SimpleFactoryPattern"]();
@@ -23,4 +25,5 @@ const DesignPatterns = {
 // DesignPatterns["BuilderPattern"]();
 // DesignPatterns["PrototypePattern"]();
 // DesignPatterns["SignletonPattern"]();
-DesignPatterns["AdapterPattern"]();
+// DesignPatterns["AdapterPattern"]();
+DesignPatterns["BridgePattern"]();
