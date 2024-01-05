@@ -154,8 +154,7 @@ import { ImageImp } from "./ImageImp";
 import config from "./config.json";
 
 export const BridgePatternClient = async () => {
-  const RefinedAbstraction: string = config.RefinedAbstraction;
-  const ConcreteImplementor: string = config.ConcreteImplementor;
+  const { RefinedAbstraction, ConcreteImplementor } = config;
 
   const RefinedAbstractionModule = await import(`./${RefinedAbstraction}`);
   const ConcreteImplementorModule = await import(`./${ConcreteImplementor}`);
