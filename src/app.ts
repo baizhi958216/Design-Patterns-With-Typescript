@@ -9,6 +9,7 @@ import { BridgePatternClient } from "./StructuralPatterns/BridgePattern/BridgePa
 import { CompositePatternClient } from "./StructuralPatterns/CompositePattern/CompositePatternClient";
 import { DecoratorPatternClient } from "./StructuralPatterns/DecoratorPattern/DecoratorPatternClient";
 import { FacadePatternClient } from "./StructuralPatterns/FacadePattern/FacadePatternClient";
+import { FlyweightPatternClient } from "./StructuralPatterns/FlyweightPattern/FlyweightPatternClient";
 
 const DesignPatterns = {
   // 简单工厂模式
@@ -23,6 +24,7 @@ const DesignPatterns = {
   CompositePattern: CompositePatternClient,
   DecoratorPattern: DecoratorPatternClient,
   FacadePattern: FacadePatternClient,
+  FlyweightPattern: FlyweightPatternClient,
 };
 
 // DesignPatterns["SimpleFactoryPattern"]();
@@ -35,4 +37,5 @@ const DesignPatterns = {
 // DesignPatterns["BridgePattern"]();
 // DesignPatterns["CompositePattern"]();
 // DesignPatterns["DecoratorPattern"]();
-DesignPatterns["FacadePattern"]();
+// DesignPatterns["FacadePattern"]();
+DesignPatterns["FlyweightPattern"]();
