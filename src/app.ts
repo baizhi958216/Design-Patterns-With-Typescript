@@ -12,6 +12,7 @@ import { FacadePatternClient } from "./StructuralPatterns/FacadePattern/FacadePa
 import { FlyweightPatternClient } from "./StructuralPatterns/FlyweightPattern/FlyweightPatternClient";
 import { ProxyPatternClient } from "./StructuralPatterns/ProxyPattern/ProxyPatternClient";
 import { ChainofResponsibilityPatternClient } from "./BehavioralPatterns/ChainofResponsibilityPattern/ChainofResponsibilityPatternClient";
+import { CommandPatternClient } from "./BehavioralPatterns/CommandPattern/CommandPatternClient";
 
 const DesignPatterns = {
   // 简单工厂模式
@@ -29,6 +30,7 @@ const DesignPatterns = {
   FlyweightPattern: FlyweightPatternClient,
   ProxyPattern: ProxyPatternClient,
   ChainofResponsibilityPattern: ChainofResponsibilityPatternClient,
+  CommandPattern: CommandPatternClient,
 };
 
 // DesignPatterns["SimpleFactoryPattern"]();
@@ -44,4 +46,5 @@ const DesignPatterns = {
 // DesignPatterns["FacadePattern"]();
 // DesignPatterns["FlyweightPattern"]();
 // DesignPatterns["ProxyPattern"]();
-DesignPatterns["ChainofResponsibilityPattern"]();
+// DesignPatterns["ChainofResponsibilityPattern"]();
+DesignPatterns["CommandPattern"]();
