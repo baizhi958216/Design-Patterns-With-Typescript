@@ -15,6 +15,7 @@ import { ChainofResponsibilityPatternClient } from "./BehavioralPatterns/Chainof
 import { CommandPatternClient } from "./BehavioralPatterns/CommandPattern/CommandPatternClient";
 import { InterpreterPatternClient } from "./BehavioralPatterns/InterpreterPattern/InterpreterPatternClient";
 import { IteratorPatternClient } from "./BehavioralPatterns/IteratorPattern/IteratorPatternClient";
+import { MediatorPatternClient } from "./BehavioralPatterns/MediatorPattern/MediatorPatternClient";
 
 const DesignPatterns = {
   // 简单工厂模式
@@ -35,6 +36,7 @@ const DesignPatterns = {
   CommandPattern: CommandPatternClient,
   InterpreterPattern: InterpreterPatternClient,
   IteratorPattern: IteratorPatternClient,
+  MediatorPattern: MediatorPatternClient,
 };
 
 // DesignPatterns["SimpleFactoryPattern"]();
@@ -53,4 +55,5 @@ const DesignPatterns = {
 // DesignPatterns["ChainofResponsibilityPattern"]();
 // DesignPatterns["CommandPattern"]();
 // DesignPatterns["InterpreterPattern"]();
-DesignPatterns["IteratorPattern"]();
+// DesignPatterns["IteratorPattern"]();
+DesignPatterns["MediatorPattern"]();
