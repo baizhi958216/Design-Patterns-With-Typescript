@@ -17,6 +17,7 @@ import { InterpreterPatternClient } from "./BehavioralPatterns/InterpreterPatter
 import { IteratorPatternClient } from "./BehavioralPatterns/IteratorPattern/IteratorPatternClient";
 import { MediatorPatternClient } from "./BehavioralPatterns/MediatorPattern/MediatorPatternClient";
 import { MementoPatternClient } from "./BehavioralPatterns/MementoPattern/MementoPatternClient";
+import { ObserverPatternClient } from "./BehavioralPatterns/ObserverPattern/ObserverPatternClient";
 
 const DesignPatterns = {
   // 简单工厂模式
@@ -39,6 +40,7 @@ const DesignPatterns = {
   IteratorPattern: IteratorPatternClient,
   MediatorPattern: MediatorPatternClient,
   MementoPattern: MementoPatternClient,
+  ObserverPattern: ObserverPatternClient,
 };
 
 // DesignPatterns["SimpleFactoryPattern"]();
@@ -59,4 +61,5 @@ const DesignPatterns = {
 // DesignPatterns["InterpreterPattern"]();
 // DesignPatterns["IteratorPattern"]();
 // DesignPatterns["MediatorPattern"]();
-DesignPatterns["MementoPattern"]();
+// DesignPatterns["MementoPattern"]();
+DesignPatterns["ObserverPattern"]();
