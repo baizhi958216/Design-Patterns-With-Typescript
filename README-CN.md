@@ -22,19 +22,19 @@
 
 2. 对象模式（处理对象之间的关系，这些关系在运行时变化，具有动态性）
 
-| 范围/目的 | 创建型模式   | 结构型模式         | 行为型模式   |
-| --------- | ------------ | ------------------ | ------------ |
-| 类模式    | 工厂方法模式 | （类）适配器模式   | 解释器模式   |
-|           |              |                    | 模板方法模式 |
-| 对象模式  | 抽象工厂模式 | （对象）适配器模式 | 职责链模式   |
-|           | 建造者模式   | 桥接模式           | 命令模式     |
-|           | 原型模式     | 组合模式           | 迭代器模式   |
-|           | 单例模式     | 装饰模式           | 中介者模式   |
-|           |              | 外观模式           | 备忘录模式   |
-|           |              | 享元模式           | 观察者模式   |
-|           |              | 代理模式           | 状态模式     |
-|           |              |                    | 策略模式     |
-|           |              |                    | 访问者模式   |
+| 范围/目的 | 创建型模式                                                                   | 结构型模式                                                                 | 行为型模式                                                                       |
+| --------- | ---------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| 类模式    | [工厂方法模式](./src/CreationalPatterns/FactoryMethodPattern/README-CN.md)   | （类）适配器模式                                                           | [解释器模式](./src/BehavioralPatterns/InterpreterPattern/README-CN.md)           |
+|           |                                                                              |                                                                            | [模板方法模式](./src/BehavioralPatterns/TemplateMethodPattern/README-CN.md)      |
+| 对象模式  | [抽象工厂模式](./src/CreationalPatterns/AbstractFactoryPattern/README-CN.md) | [（对象）适配器模式](./src/StructuralPatterns/AdapterPattern/README-CN.md) | [职责链模式](./src/BehavioralPatterns/ChainofResponsibilityPattern/README-CN.md) |
+|           | [建造者模式](./src/CreationalPatterns/BuilderPattern/README-CN.md)           | [桥接模式](./src/StructuralPatterns/BridgePattern/README-CN.md)            | [命令模式](./src/BehavioralPatterns/CommandPattern/README-CN.md)                 |
+|           | [原型模式](./src/CreationalPatterns/PrototypePattern/README-CN.md)           | [组合模式](./src/StructuralPatterns/CompositePattern/README-CN.md)         | [迭代器模式](./src/BehavioralPatterns/IteratorPattern/README-CN.md)              |
+|           | [单例模式](./src/CreationalPatterns/SingletonPattern/README-CN.md)           | [装饰模式](./src/StructuralPatterns/DecoratorPattern/README-CN.md)         | [中介者模式](./src/BehavioralPatterns/MediatorPattern/README-CN.md)              |
+|           |                                                                              | [外观模式](./src/StructuralPatterns/FacadePattern/README-CN.md)            | [备忘录模式](./src/BehavioralPatterns/MementoPattern/README-CN.md)               |
+|           |                                                                              | [享元模式](./src/StructuralPatterns/FlyweightPattern/README-CN.md)         | [观察者模式](./src/BehavioralPatterns/ObserverPattern/README-CN.md)              |
+|           |                                                                              | [代理模式](./src/StructuralPatterns/ProxyPattern/README-CN.md)             | [状态模式](./src/BehavioralPatterns/StatePattern/README-CN.md)                   |
+|           |                                                                              |                                                                            | [策略模式](./src/BehavioralPatterns/StrategyPattern/README-CN.md)                |
+|           |                                                                              |                                                                            | [访问者模式](./src/BehavioralPatterns/VisitorPattern/README-CN.md)               |
 
 ## 面向对象设计原则
 

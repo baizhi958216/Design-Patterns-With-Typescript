@@ -21,6 +21,7 @@ import { ObserverPatternClient } from "./BehavioralPatterns/ObserverPattern/Obse
 import { StatePatternClient } from "./BehavioralPatterns/StatePattern/StatePatternClient";
 import { StrategyPatternClient } from "./BehavioralPatterns/StrategyPattern/StrategyPatternClient";
 import { TemplateMethodPatternClient } from "./BehavioralPatterns/TemplateMethodPattern/TemplateMethodPatternClient";
+import { VisitorPatternClient } from "./BehavioralPatterns/VisitorPattern/VisitorPatternClient";
 
 const DesignPatterns = {
   // 简单工厂模式
@@ -47,6 +48,7 @@ const DesignPatterns = {
   StatePattern: StatePatternClient,
   StrategyPattern: StrategyPatternClient,
   TemplateMethodPattern: TemplateMethodPatternClient,
+  VisitorPattern: VisitorPatternClient,
 };
 
 // DesignPatterns["SimpleFactoryPattern"]();
@@ -71,4 +73,5 @@ const DesignPatterns = {
 // DesignPatterns["ObserverPattern"]();
 // DesignPatterns["StatePattern"]();
 // DesignPatterns["StrategyPattern"]();
-DesignPatterns["TemplateMethodPattern"]();
+// DesignPatterns["TemplateMethodPattern"]();
+DesignPatterns["VisitorPattern"]();

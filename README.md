@@ -24,19 +24,19 @@ Classified by **Scope**:
 
 2. Object Patterns (Handle object relationships, dynamic relationships at runtime)
 
-| Scope/Purpose | Creational Patterns | Structural Patterns | Behavioral Patterns     |
-| ------------- | ------------------- | ------------------- | ----------------------- |
-| Class         | Factory Method      | (Class) Adapter     | Interpreter             |
-|               |                     |                     | Template Method         |
-| Object        | Abstract Factory    | (Object) Adapter    | Chain of Responsibility |
-|               | Builder             | Bridge              | Command                 |
-|               | Prototype           | Composite           | Iterator                |
-|               | Singleton           | Decorator           | Mediator                |
-|               |                     | Facade              | Memento                 |
-|               |                     | Flyweight           | Observer                |
-|               |                     | Proxy               | State                   |
-|               |                     |                     | Strategy                |
-|               |                     |                     | Visitor                 |
+| Scope/Purpose | Creational Patterns                                                           | Structural Patterns                                                   | Behavioral Patterns                                                                        |
+| ------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| Class         | [Factory Method](./src/CreationalPatterns/FactoryMethodPattern/README.md)     | (Class) Adapter                                                       | [Interpreter](./src/BehavioralPatterns/InterpreterPattern/README.md)                       |
+|               |                                                                               |                                                                       | [Template](./src/BehavioralPatterns/TemplateMethodPattern/README.md)                       |
+| Object        | [Abstract Factory](./src/CreationalPatterns/AbstractFactoryPattern/README.md) | [(Object) Adapter](./src/StructuralPatterns/AdapterPattern/README.md) | [Chain of Responsibility](./src/BehavioralPatterns/ChainofResponsibilityPattern/README.md) |
+|               | [Builder](./src/CreationalPatterns/BuilderPattern/README.md)                  | [Bridge](./src/StructuralPatterns/BridgePattern/README.md)            | [Command](./src/BehavioralPatterns/CommandPattern/README.md)                               |
+|               | [Prototype](./src/CreationalPatterns/PrototypePattern/README.md)              | [Composite](./src/StructuralPatterns/CompositePattern/README.md)      | [Iterator](./src/BehavioralPatterns/IteratorPattern/README.md)                             |
+|               | [Singleton](./src/CreationalPatterns/SingletonPattern/README.md)              | [Decorator](./src/StructuralPatterns/DecoratorPattern/README.md)      | [Mediator](./src/BehavioralPatterns/MediatorPattern/README.md)                             |
+|               |                                                                               | [Facade](./src/StructuralPatterns/FacadePattern/README.md)            | [Memento](./src/BehavioralPatterns/MementoPattern/README.md)                               |
+|               |                                                                               | [Flyweight](./src/StructuralPatterns/FlyweightPattern/README.md)      | [Observer](./src/BehavioralPatterns/ObserverPattern/README.md)                             |
+|               |                                                                               | [Proxy](./src/StructuralPatterns/ProxyPattern/README.md)              | [State](./src/BehavioralPatterns/StatePattern/README.md)                                   |
+|               |                                                                               |                                                                       | [Strategy](./src/BehavioralPatterns/StrategyPattern/README.md)                             |
+|               |                                                                               |                                                                       | [Visitor](./src/BehavioralPatterns/VisitorPattern/README.md)                               |
 
 ## Object-Oriented Design Principles
 
